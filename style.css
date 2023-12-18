@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --bg-url: url(./design/bg-mobile.jpg);
+}
+
+body {
+    background-image: url(./design/bg-mobile.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    @media (max-width: 360px) and (max-height: 532px) {
+        background-size: 100% 100%; /* Ou experimente outras combinações */
+    }
+}
+
+
+
+#container {
+    width: 100%;
+    max-width: 588px;
+    margin: 56px auto 0px;
+    padding: 0 24px;
+
+}
+body * {
+    font-family: 'Inter', sans-serif;
+    color:rgb(0, 0, 0)
+}
+
+
+#profile {
+    text-align: center;
+    padding: 24px;
+}
+
+#profile img {
+    width: 112px;
+}
+
+#profile p {
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 8px;
+
+}
+
+
+#profile p::before {
+    content: "@pedrocristov"; /* Adiciona o texto desejado */
+    color: white; /* Define a cor para branco */
+}
+ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+ul li a{
+    display: flex;
+align-items: center;
+justify-content: center;
+
+padding: 16px 24px;
+
+background: rgb(213, 208, 208);
+border: 1px solid rgb(0, 0, 0);
+border-radius: 8px;
+
+backdrop-filter: blur(4px);
+
+text-decoration: none;
+font-weight: 500;
+
+transition: background 0.2s;
+}
+
+ul li a:hover {
+    background: rgb(213, 208, 208, 0.1);
+    border: 1.5px solid rgb(0, 0, 0);
+}
+
+
+@media (min-width: 700px) {
+    :root {
+        --bg-url: url(./design/bg-desktop.jpg);
+    }
+
+    body {
+        background-image: url(./design/bg-desktop.jpg) /* Aplicando a variável para o background da página */
+    }
+}
